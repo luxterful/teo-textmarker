@@ -1,28 +1,37 @@
 export default {
-  discharge_adoption: {
-    title: "Entlassung Vermittlung",
+  discharge_adoption: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Adoption_Schutzgebuehr",
         title: "Schutzgebühr",
       },
     ],
-  },
-  discharge_security_custody: {
-    title: "Entlassung Sicherheitsverwahrung",
+  }),
+  discharge_security_custody: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Sicherheitsverwahrung_Nachpruefdatum",
         title: "Nachprüfedatum",
       },
     ],
-  },
-  // no special fields
-  // discharge_boarding: {
-  //  fields: []
-  // },
-  discharge_general: {
-    title: "Entlassung allgemein",
+  }),
+  discharge_boarding: (title: string) => ({
+    title,
+    fields: [
+      {
+        id: "TEXTMARKE_Pension_Gesamtkosten",
+        title: "Gesamtkosten",
+      },
+      {
+        id: "TEXTMARKE_Pension_DauerTage",
+        title: "Dauer",
+      },
+    ],
+  }),
+  discharge_general: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Entlassungsdatum",
@@ -38,9 +47,9 @@ export default {
         hint: "bei Adoption und Tod leer",
       },
     ],
-  },
-  admissions_boarding: {
-    title: "Aufnahme Pension",
+  }),
+  admissions_boarding: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Pension_Enddatum",
@@ -55,9 +64,9 @@ export default {
         title: "Dauer",
       },
     ],
-  },
-  admissions_found: {
-    title: "Aufnahme Fundtier",
+  }),
+  admissions_found: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Fundtier_Funddatum",
@@ -84,9 +93,9 @@ export default {
         title: "Fundstätte",
       },
     ],
-  },
-  admissions_general: {
-    title: "Aufnahme allgemein",
+  }),
+  admissions_general: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Aufnahmeart",
@@ -125,8 +134,8 @@ export default {
         hint: "bei Übereignung leer",
       },
     ],
-  },
-  contact: (key: string, title: string) => ({
+  }),
+  contact: (title: string, key: string) => ({
     title: title,
     fields: [
       {
@@ -258,8 +267,8 @@ export default {
       },
     ],
   }),
-  shelter: {
-    title: "Tierheim",
+  shelter: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Tierheimname",
@@ -270,9 +279,9 @@ export default {
         title: "Geschäftsführer",
       },
     ],
-  },
-  animal: {
-    title: "Tier",
+  }),
+  animal: (title: string) => ({
+    title,
     fields: [
       {
         id: "TEXTMARKE_Tiernummer",
@@ -375,5 +384,5 @@ export default {
         title: "Eigenes Feld 1",
       },
     ],
-  },
+  }),
 };
