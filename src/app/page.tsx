@@ -26,7 +26,7 @@ export default function Home() {
         onChange={handleChange}
       >
         {processes.map((process) => (
-          <option>{process.title}</option>
+          <option key={process.title}>{process.title}</option>
         ))}
       </select>
 
@@ -34,12 +34,12 @@ export default function Home() {
         {processes
           .find((process) => process.title === selection)!
           .groups.map((group) => (
-            <div className="mb-5">
+            <div className="mb-5" key={group.title}>
               <span className="text-lg font-bold">{group.title}</span>
               <table className="table-auto border-separate border-spacing-2">
                 <tbody>
                   {group.fields.map((field) => (
-                    <tr>
+                    <tr key={group.title + field.id}>
                       <td>{field.title}</td>
                       <td
                         className="border p-2 rounded-md cursor-pointer flex gap-2 items-center text-gray-600 hover:text-black"
