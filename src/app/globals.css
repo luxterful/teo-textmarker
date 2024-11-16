@@ -2,20 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Initial state */
+.content-div {
+  opacity: 1;
+  transition: opacity 0.25s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Fade-out animation */
+.fade-out {
+  opacity: 0;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Fade-in animation */
+.fade-in {
+  opacity: 1;
 }

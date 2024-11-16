@@ -28,6 +28,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="bg-[rgb(25,118,210)] text-white py-5 mb-5">
+          <div className="font-bold text-3xl container mx-auto px-5">
+            TEO Textmarken
+          </div>
+        </div>
         {children}
       </body>
     </html>
